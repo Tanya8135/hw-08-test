@@ -1,12 +1,12 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { selectFilteredContacts, selectIsLoading } from 'redux/selectors';
-import { addContact } from 'redux/operations';
+import { useDispatch } from 'react-redux';
+import { useContact } from 'hooks/useContact';
+import { addContact } from 'redux/contacts/operations';
 import css from './ContactForm.module.css';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
-  const filteredContact = useSelector(selectFilteredContacts);
-  const isLoadingContacts = useSelector(selectIsLoading);
+
+  const { isLoading, filteredContacts } = useContact();
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -14,11 +14,11 @@ export const ContactForm = () => {
     const name = form.elements.name.value;
     const number = form.elements.number.value;
 
-    if (isLoadingContacts) {
+    if (isLoading) {
       return;
     }
 
-    const dublicateContact = filteredContact.some(
+    const dublicateContact = filteredContacts.some(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
 

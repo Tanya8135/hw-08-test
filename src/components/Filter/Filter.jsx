@@ -1,4 +1,4 @@
-import { setStatusFilter } from 'redux/filterSlice';
+import { setStatusFilter } from 'redux/contacts/filterSlice';
 import { useDispatch } from 'react-redux';
 import css from './Filter.module.css';
 

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleTheme } from 'redux/themeSlice';
-import { selectTheme } from 'redux/selectors';
+import { toggleTheme } from 'redux/contacts/themeSlice';
+import { selectTheme } from 'redux/contacts/selectors';
 import { useEffect } from 'react';
 
 import css from './Theme.module.css';
