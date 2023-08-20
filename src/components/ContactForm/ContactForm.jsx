@@ -5,7 +5,6 @@ import css from './ContactForm.module.css';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
-
   const { isLoading, filteredContacts } = useContact();
 
   const handleSubmit = e => {

@@ -3,6 +3,7 @@ import { useContact } from 'hooks/useContact';
 import { deleteContact, fetchContacts } from 'redux/contacts/operations';
 import { useEffect } from 'react';
 import { Loader } from 'components/Loader/Loader';
+
 import css from './ContactList.module.css';
 
 export const ContactList = () => {
@@ -40,3 +41,5 @@ export const ContactList = () => {
     </>
   );
 };
+
+export default ContactList;
