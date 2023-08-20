@@ -44,8 +44,6 @@ const contactsSlice = createSlice({
       state.items.splice(index, 1);
     }
   }
-
-
 });
 
 export const contactsReducer = contactsSlice.reducer;

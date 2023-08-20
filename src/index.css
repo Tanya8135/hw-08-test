@@ -74,3 +74,23 @@ img {
   background: #fff;
   color: #000;
 }
+
+input {
+  display: block;
+  font-size: 14px;
+  min-width: 300px;
+  padding: 8px 8px;
+  margin-bottom: 31px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+.darkTheme input {
+  box-shadow: 0px 0px 10px 2px rgba(243, 243, 243, 0.50);
+}
+
+.lightTheme input {
+  box-shadow: 0px 0px 10px 2px rgba(30, 30, 30, 0.25);
+}
