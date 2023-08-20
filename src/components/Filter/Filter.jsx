@@ -4,6 +4,7 @@ import css from './Filter.module.css';
 
 export const Filter = () => {
   const dispatch = useDispatch();
+  
   return (
     <div className={css.filterBox}>
       <label className={css.subTitle}>Find contacts by Name</label>

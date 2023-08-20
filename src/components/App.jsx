@@ -37,22 +37,28 @@ const App = () => {
           <Route
             path="/register"
             element={
-              <RestrictedRoute redirectTo="/login" component={RegisterPage} />
+              <RestrictedRoute
+                redirectTo="/login"
+                component={<RegisterPage />}
+              />
             }
           />
           <Route
             path="/login"
             element={
-              <RestrictedRoute redirectTo="contacts" component={LoginPage} />
+              <RestrictedRoute
+                redirectTo="/login"
+                component={<LoginPage />}
+              />
             }
           />
           <Route
             path="/contacts"
             element={
-              <PrivateRoute redirectTo="/login" component={ContactsPage} />
+              <PrivateRoute redirectTo="/contacts" component={<ContactsPage />} />
             }
           />
-          <Route path="*" element={HomePage} />
+          <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>
     </div>

@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
+import { setStatusFilter } from 'redux/contacts/filterSlice';
 
 import css from './ContactEditor.module.css';
 
@@ -20,12 +21,19 @@ const ContactEditor = () => {
   };
 
   return (
-    <form className={css.form} onSubmit={handleSubmit}>
-      <input name="text" className={css.input} />
-      <button type="submit" className={css.button}>
-        Add contact
-      </button>
-    </form>
+    <div>
+      <h2>Editor</h2>
+      <form className={css.form} onSubmit={handleSubmit}>
+        <input
+          name="text"
+          className={css.input}
+          onChange={event => dispatch(setStatusFilter(event.target.value))}
+        />
+        <button type="submit" className={css.button}>
+          Add contact
+        </button>
+      </form>
+    </div>
   );
 };
 
