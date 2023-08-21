@@ -4,7 +4,6 @@ import { setStatusFilter } from 'redux/contacts/filterSlice';
 
 import css from './ContactEditor.module.css';
 
-// редактирование
 const ContactEditor = () => {
   const dispatch = useDispatch();
 
