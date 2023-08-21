@@ -55,16 +55,16 @@ const CustomButtonRoot = styled('button')`
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.875rem;
   line-height: 1.5;
-  //   background-color: ${blue[500]};
+  // background-color: ${blue[500]};
   background-color: transparent;
 
   color: #b1b1b1;
   border-radius: 8px;
+  border: 1px solid #c0c0c0;
   font-weight: 600;
   padding: 8px 16px;
   cursor: pointer;
   transition: all 150ms ease;
-  border: none;
 
   &:hover {
     // background-color: ${blue[600]};

@@ -2,9 +2,9 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import { Button } from '@mui/base/Button';
-import { Input, inputClasses } from '@mui/base/Input';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { Input } from '@mui/base/Input';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { styled } from '@mui/system';
 
 const CustomInput = React.forwardRef(function CustomInput(props, ref) {
@@ -44,7 +44,7 @@ export default function InputAdornments() {
     showPassword: false,
   });
 
-  const handleChange = (prop) => (event) => {
+  const handleChange = prop => event => {
     setValues({ ...values, [prop]: event.target.value });
   };
 
@@ -55,7 +55,7 @@ export default function InputAdornments() {
     });
   };
 
-  const handleMouseDownPassword = (event) => {
+  const handleMouseDownPassword = event => {
     event.preventDefault();
   };
 
@@ -67,15 +67,16 @@ export default function InputAdornments() {
         gap: 2,
       }}
     >
-      <CustomInput
+      {/* <CustomInput
         id="outlined-start-adornment"
         startAdornment={<InputAdornment>kg</InputAdornment>}
-      />
+      /> */}
       <CustomInput
         id="outlined-adornment-password"
         type={values.showPassword ? 'text' : 'password'}
         value={values.password}
         onChange={handleChange('password')}
+        name="password"
         endAdornment={
           <InputAdornment>
             <IconButton
@@ -83,7 +84,7 @@ export default function InputAdornments() {
               onClick={handleClickShowPassword}
               onMouseDown={handleMouseDownPassword}
             >
-              {values.showPassword ? <VisibilityOff /> : <Visibility />}
+              {values.showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
             </IconButton>
           </InputAdornment>
         }
@@ -117,20 +118,14 @@ const StyledInputRoot = styled('div')(
   ({ theme }) => `
   font-family: IBM Plex Sans, sans-serif;
   font-weight: 400;
+  height: 37px;
   border-radius: 8px;
-  color: ${theme.palette.mode === 'dark' ? grey[300] : grey[500]};
   background: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
-  border: 1px solid ${theme.palette.mode === 'dark' ? grey[700] : grey[200]};
-  box-shadow: 0px 2px 2px ${theme.palette.mode === 'dark' ? grey[900] : grey[50]};
   display: flex;
   align-items: center;
   justify-content: center;
 
 
-  &.${inputClasses.focused} {
-    border-color: ${blue[400]};
-    box-shadow: 0 0 0 3px ${theme.palette.mode === 'dark' ? blue[500] : blue[200]};
-  }
 
   &:hover {
     border-color: ${blue[400]};
@@ -140,7 +135,7 @@ const StyledInputRoot = styled('div')(
   &:focus-visible {
     outline: 0;
   }
-`,
+`
 );
 
 const StyledInputElement = styled('input')(
@@ -150,13 +145,13 @@ const StyledInputElement = styled('input')(
   font-weight: 400;
   line-height: 1.5;
   flex-grow: 1;
-  color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
+//   color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
   background: inherit;
   border: none;
   border-radius: inherit;
-  padding: 8px 12px;
   outline: 0;
-`,
+  margin: 0;
+`
 );
 
 const IconButton = styled(Button)(
@@ -165,10 +160,15 @@ const IconButton = styled(Button)(
   align-items: center;
   justify-content: center;
   border: none;
-  background: inherit;
+//   background: inherit;
   cursor: pointer;
   color: ${theme.palette.mode === 'dark' ? grey[300] : grey[700]};
-  `,
+  transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  
+  &:hover {
+    color: ${grey[500]};
+  }
+  `
 );
 
 const InputAdornment = styled('div')`
