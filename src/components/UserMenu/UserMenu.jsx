@@ -10,8 +10,14 @@ const UserMenu = () => {
 
   return (
     <div className={css.wrapper}>
-      <p className={css.username}>Welcom, <span className={css.name}>{user.name}</span></p>
-      <button type="button" className={css.btn} onClick={() => dispatch(logOut())}>
+      <p className={css.username}>
+        Welcom, <span className={css.name}>{user.name}</span>
+      </p>
+      <button
+        type="button"
+        className={css.btn}
+        onClick={() => dispatch(logOut())}
+      >
         Logout
       </button>
     </div>
