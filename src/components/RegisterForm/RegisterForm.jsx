@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 
-import InputAdornments from 'components/InputLibStyle/InputLibStyle';
+import InputAdornments from 'components/InputLibStyle';
 
 import css from './RegisterForm.module.css';
 

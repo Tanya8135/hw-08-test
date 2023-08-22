@@ -1,7 +1,10 @@
-.btnTheme {
-  background-color: #939191;
-  padding: 9px;
+.btn {
+  display: block;
+  color: #b1b1b1;
+  margin-bottom: 50px;
+  padding: 8px 10px;
   border-radius: 10px;
+  border: 1px solid #c0c0c0;
 
   transition-property: background-color, color;
   transition-duration: 250ms;
@@ -9,14 +12,6 @@
 
   &:hover {
     background-color: #818181;
+    color: #fff;
   }
-
-  &:active {
-    background-color: #454545;
-  }
-}
-
-.test {
-  display: flex;
-  justify-content: flex-end;
 }

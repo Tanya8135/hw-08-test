@@ -2,15 +2,20 @@
   font-size: 18px;
   font-weight: 700;
   padding: 10px 12px;
+  margin-left: 100px;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 .text {
   color: #363636;
+  margin-top: 15px;
 }
 
 .nav {
   display: flex;
-  justify-content: space-between;
 }
 
 /* .darkTheme {

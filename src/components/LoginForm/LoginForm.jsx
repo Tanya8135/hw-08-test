@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
 
+import InputAdornments from 'components/InputLibStyle';
+
 import css from './LoginForm.module.css';
 
 const LoginForm = () => {
@@ -28,7 +30,9 @@ const LoginForm = () => {
       </label>
       <label className={css.label}>
         <p>Password</p>
-        <input type="password" name="password" />
+        <InputAdornments>
+          <input type="password" name="password" className={css.int} required />
+        </InputAdornments>
       </label>
       <button type="submit" className={css.btn}>
         Log In

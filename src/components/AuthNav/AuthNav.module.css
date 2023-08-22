@@ -1,6 +1,7 @@
 .navBox {
   display: flex;
   margin-bottom: 31px;
+  justify-content: flex-end;
 }
 
 .link {

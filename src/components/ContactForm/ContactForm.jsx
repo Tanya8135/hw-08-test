@@ -133,14 +133,9 @@ export const ContactForm = () => {
       {/* <button className={css.btn} type="submit">
         Add contact
       </button> */}
-      {/* <button className={css.btn}>
-        <UseButton />
-      </button> */}
       <div className={css.btnBox}>
         <UseButton>
-          <button className={css.btn} type="submit">
-            Add contact
-          </button>{' '}
+          <button type="submit">Add contact</button>{' '}
         </UseButton>
       </div>
     </form>

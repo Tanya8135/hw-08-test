@@ -20,7 +20,7 @@ const Theme = () => {
   }, [darkTheme]);
 
   return (
-    <div>
+    <div className={css.test}>
       <button className={css.btnTheme} onClick={() => dispatch(toggleTheme())}>
         Theme: {darkTheme ? 'Light' : 'Dark'}
       </button>

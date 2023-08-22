@@ -112,3 +112,11 @@ input {
 .lightTheme h1 {
   color: #363636;
 }
+
+.darkTheme h2 {
+  color: #fff;
+}
+
+.lightTheme h2 {
+  color: #363636;
+}

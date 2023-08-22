@@ -6,6 +6,8 @@ import { useButton } from '@mui/base/useButton';
 import { styled } from '@mui/system';
 import Stack from '@mui/material/Stack';
 
+import css from './ButtonLib.module.css';
+
 const CustomButton = React.forwardRef(function CustomButton(props, ref) {
   const { children, disabled } = props;
   const { active, focusVisible, getRootProps } = useButton({
@@ -38,9 +40,7 @@ CustomButton.propTypes = {
 export default function UseButton() {
   return (
     <Stack spacing={2} direction="row">
-      <CustomButton onClick={() => console.log('click!')}>
-        Add contact
-      </CustomButton>
+      <button className={css.btn}>Add contact</button>
     </Stack>
   );
 }

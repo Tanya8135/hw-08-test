@@ -39,7 +39,6 @@ const Navigation = () => {
   const { isLoggedIn } = useAuth();
   const darkTheme = useSelector(selectTheme);
 
-  // const navClassName = darkTheme ? css.darkTheme : css.lightTheme;
   const textClassName = darkTheme ? css.darkText : css.lightText;
 
   return (
@@ -49,7 +48,7 @@ const Navigation = () => {
       </NavLink>
       {isLoggedIn && (
         <NavLink className={css.link} to="/contacts">
-          <p>Contacts</p>
+          <p className={css.text}>Contacts</p>
         </NavLink>
       )}
     </nav>
