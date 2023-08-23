@@ -77,6 +77,7 @@ export default function InputAdornments() {
         value={values.password}
         onChange={handleChange('password')}
         name="password"
+        placeholder="Enter password ..."
         endAdornment={
           <InputAdornment>
             <IconButton

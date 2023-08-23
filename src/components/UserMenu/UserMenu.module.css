@@ -4,6 +4,17 @@
   color: #fce357;
 }
 
+.boxBorder {
+  max-width: 300px;
+  border: 1px solid #b1b1b1;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.useremail {
+  font-style: italic;
+}
+
 .name {
   color: #4fa94d;
 }

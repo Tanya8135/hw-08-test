@@ -10,9 +10,12 @@ const UserMenu = () => {
 
   return (
     <div className={css.wrapper}>
-      <p className={css.username}>
-        Welcom, <span className={css.name}>{user.name}</span>
-      </p>
+      <div className={css.boxBorder}>
+        <p className={css.username}>
+          Welcom, <span className={css.name}>{user.name}</span>
+        </p>
+        <p className={css.useremail}>{user.email}</p>
+      </div>
       <button
         type="button"
         className={css.btn}
